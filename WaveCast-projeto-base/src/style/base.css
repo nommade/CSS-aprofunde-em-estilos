@@ -1,3 +1,7 @@
+@import url(cabecalho.css);
+@import url(main.css);
+@import url(menu-lateral.css);
+
 /*Reset*/
 a {
     text-decoration: none;
@@ -29,6 +33,10 @@ button {
 }
 
 body {
+    display: grid;
+    grid-template-areas: "aiside header"
+                         "aiside main";
+    grid-template-columns: auto 1fr; 
     color: var(--cor-texto-principal);
     background: var(--gradiente);
     font-family: var(--fonte-textos);
