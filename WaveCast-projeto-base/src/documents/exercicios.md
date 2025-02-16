@@ -148,3 +148,11 @@ Assinale a alternativa que permite refatorar o código acima utilizando a propri
 Em um processo seletivo, você foi indagado sobre duas páginas da internet:
 
 <img src="https://cdn3.gnarususercontent.com.br/3368-grid/Aula5-img1.png.png">
+
+Pensando estrategicamente, em qual você aplicaria Grid ou Flex e porquê?
+
+```xml
+Aplicaria display: flex na Imagem 1, pois os elementos estão organizados de forma unidirecional, ou seja, estão seguindo apenas um sentido. Na imagem 2, aplicaria display: grid já que há elementos alinhados tanto em linhas quanto em colunas, ou seja, de forma bidimensional.
+```
+
+> O display: grid é ideal para organizar elementos de forma bidimensional, e o display: flex é ideal para organizar elementos de forma unidimensional. Lembrando que essa é uma orientação de uso, com objetivo de ter um código mais simples e objetivo.
