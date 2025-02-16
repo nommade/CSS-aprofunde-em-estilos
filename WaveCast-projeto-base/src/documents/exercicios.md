@@ -40,6 +40,10 @@ body {
 
 ---
 
+<br>
+
+---
+
 Você está remodelando o site de uma loja. O cliente pediu para você criar uma seção de um site onde todas as imagens devem ser alinhadas à parte inferior das células do grid, de maneira que, independentemente da altura da célula, as imagens sempre apareçam no final. Seu código-base inicial é o seguinte:
 
 ```css
@@ -55,3 +59,34 @@ Qual conjunto de propriedade + valor você deve adicionar à classe .secao-image
 align-items: end;
 ```
 > A propriedade CSS align-items: end; alinha os itens ao final do contêiner na direção do bloco, que é o que nós queremos neste caso.
+
+---
+
+<br>
+
+---
+
+Você trabalha em uma equipe de desenvolvimento Front-end e repara que um colega de equipe escreveu o seguinte código para organizar quatro itens utilizando CSS Grid:
+
+```css
+.secao-horizontal .secao__cartoes {
+  display: grid;
+  grid-template-columns: 100px, 100px, 100px, 100px;
+}
+```
+
+Sabendo que esse código é referente a uma grade de conteúdos que podem aumentar ou diminuir dinamicamente, assinale a alternativa que oferece a melhor opção de refatoração do código acima aplicando responsividade com CSS Grid.
+
+```css
+.secao-horizontal .secao__cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+}
+```
+> Unindo o repeat e auto-fit é possível criar um grid dinâmico que aumente ou diminua a quantidade de colunas de acordo com a largura do elemento pai.
+
+---
+
+<br>
+
+---
