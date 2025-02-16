@@ -90,3 +90,61 @@ Sabendo que esse código é referente a uma grade de conteúdos que podem aument
 <br>
 
 ---
+
+Você está trabalhando na construção de um layout e se depara com o seguinte código:
+
+```css
+.secao-horizontal .cartao__imagem {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+}
+
+.secao-horizontal .cartao__botao {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.secao-horizontal .cartao__titulo {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.secao-horizontal .cartao__player {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+```
+
+Considere que a propriedade grid-row define a posição inicial e final de um elemento em linha, e a propriedade grid-column define a posição inicial e final de um elemento em coluna.
+
+Assinale a alternativa que permite refatorar o código acima utilizando a propriedade grid-area.
+
+```css
+.secao-horizontal .cartao__imagem {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.secao-horizontal .cartao__botao {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.secao-horizontal .cartao__titulo {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.secao-horizontal .cartao__player {
+    grid-area: 3 / 2 / 4 / 3;
+}
+```
+
+> A substituição dos valores passados nas propriedades grid-row e grid-column para a propriedade grid-area está sendo aplicada corretamente, sendo os dois primeiros valores determinando a posição inicial de linhas e colunas e os dois últimos valores determinando a posição final de linhas e colunas respectivamente.
+
+---
+
+<br>
+
+---
+
+Em um processo seletivo, você foi indagado sobre duas páginas da internet:
+
+<img src="https://cdn3.gnarususercontent.com.br/3368-grid/Aula5-img1.png.png">
