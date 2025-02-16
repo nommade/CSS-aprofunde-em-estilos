@@ -1,7 +1,6 @@
 .menu-lateral {
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
-    grid-area: aiside;
     row-gap: 2rem;
 }
 
@@ -13,4 +12,3 @@
     display: flex;
     align-items: center;
 }
-
