@@ -25,3 +25,82 @@ Qual das opções abaixo melhor implementa uma imagem de banner responsiva que s
 <img src="banner.jpg" srcset="banner-small.jpg 600w, banner-medium.jpg 1200w, banner-large.jpg 1800w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw">
 ```
 > Esta opção usa o atributo srcset para fornecer diferentes versões da imagem para diferentes tamanhos de tela e o atributo sizes para definir como a imagem deve se comportar em diferentes breakpoints.
+
+---
+<br>
+
+---
+
+Você está trabalhando na Alura Start. Sua tarefa é criar um layout fluido para a seção "Quem Somos" do site da empresa. O layout deve ser responsivo, adaptando-se bem a diferentes tamanhos de tela. Você já tem um código base, mas precisa ajustá-lo para que a seção "Quem Somos" se comporte de maneira diferente em dispositivos móveis.
+
+```css
+.quem-somos {
+  display: flex;
+  justify-content: space-between;
+  padding: 7rem 0;
+
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+    padding: var(--padding-xl) 0;
+  }
+}
+```
+
+Como você ajustaria o código CSS acima para que a seção "Quem Somos" tenha uma direção de coluna em telas menores que 768px e um espaçamento de 5rem no topo e na base?
+
+```css
+.quem-somos {
+ @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 5rem 0;
+ }
+}
+```
+> Esta alternativa ajusta a direção do flex para coluna e define o espaçamento de 5rem no topo e na base para telas menores que 768px.
+
+---
+<br>
+
+---
+
+Seu objetivo é criar um layout fluido que se adapta bem tanto em dispositivos móveis quanto em telas maiores. Para isso, você decide usar media queries e operadores para ajustar o comportamento do layout. O código base que você está utilizando é o seguinte:
+
+```css
+@media (max-width: 768px), (orientation: landscape) {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+```
+Considerando o código base fornecido, qual das seguintes opções melhor descreve o comportamento do layout quando a largura da tela é menor ou igual a 768px ou quando a orientação da tela é paisagem?
+
+```xml
+O layout irá aplicar flex-wrap: wrap e justify-content: space-around quando a largura da tela for menor ou igual a 768px ou quando a orientação da tela for paisagem.
+```
+> Perfeito, o operador , (vírgula) funciona como um "ou", aplicando os estilos se qualquer uma das condições for verdadeira.
+
+---
+<br>
+
+---
+
+Você foi encarregado de ajustar o tamanho das fontes para diferentes dispositivos mobile. O código base que você tem é o seguinte:
+
+```css
+h1,h2,h3,h4,h5 {
+@media (max-width: 768px) {
+  @media (max-width: 425px) {
+    font-size: 2.5rem;
+  }
+  &:not(h1) {
+    font-size: var(--fonte-size-l);
+  }
+}
+}
+```
+
+Com base no código fornecido, qual será o tamanho da fonte de um título <h1> em um dispositivo com largura de 400px?
+
+```css
+2.5rem
+```
+> O código aninhado @media (max-width: 425px) define font-size: 2.5rem para dispositivos com largura até 425px, incluindo 400px.

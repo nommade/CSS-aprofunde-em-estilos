@@ -50,6 +50,16 @@ h5 {
   font-family: var(--fonte-titulos);
   font-size: var(--font-size-xl);
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    @media (max-width: 425px) {
+      font-size: 2.5rem;
+    }
+
+    &:not(h1) {
+      font-size: var(--font-size-l);
+    }
+  }
 }
 
 body {
@@ -63,6 +73,10 @@ body {
 
   @media (max-width: 768px) {
     width: 674px;
+    
+    @media (max-width: 425px) {
+      width: 299px;
+    }
   }
 }
 
@@ -86,6 +100,10 @@ body {
   display: flex;
   justify-content: space-between;
   gap: var(--gap-m);
+
+  @media (max-width: 425px) {
+   display: none;   
+  }
 }
 
 .cabecalho__item > a {
@@ -174,6 +192,12 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 5.5rem 0;
+
+  @media (max-width: 768px) {
+    & > .banner__imagem {
+      display: none;
+    }
+  }
 }
 
 .banner__texto-principal {
@@ -181,6 +205,16 @@ body {
   flex-direction: column;
   gap: var(--gap-xl);
   align-items: self-start;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    padding: 0 5.5rem;
+
+    @media (max-width: 425px) {
+     padding: 0; 
+    }
+  }
 }
 
 .banner__titulo {
@@ -201,6 +235,16 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 7rem 0;
+
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+    padding: var(--padding-xl) 0;
+
+    @media (max-width: 425px) {
+      flex-direction: column-reverse;
+      gap: var(--gap-l);
+    }
+  }
 }
 
 .quem-somos__texto-principal {
@@ -209,6 +253,11 @@ body {
   flex-direction: column;
   gap: var(--gap-l);
   width: 45%;
+
+  @media (max-width: 425px) {
+    width: 100%;
+    align-items: stretch;   
+  }
 }
 
 .quem-somos__titulo {
@@ -258,10 +307,23 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: var(--gap-2xl);
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+  }
 }
 
 .sobre-nos__beneficios--card {
   width: 33.33%;
+
+  @media (max-width: 425px) {
+    width: 100%;   
+  }
 
   & > h3 {
     font-size: var(--font-size-m);
@@ -318,6 +380,16 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--gap-l);
+
+  @media (max-width: 768px) {
+    flex: 1 1 50px;
+    max-width: 25%;
+
+    @media (max-width: 425px) {
+      max-width: 100%;
+      text-align: center; 
+    }
+  }
 
   & > div > h3 {
     font-size: var(--font-size-l);
@@ -384,6 +456,14 @@ body {
     align-items: center;
     padding: 5rem 0;
 
+    @media (max-width: 768px) {
+      gap: var(--gap-xl);
+
+      @media (max-width: 425px) {
+        text-align: center;
+      }
+    }
+
     & > a:hover {
       transition: 0.2s ease-in;
       background-color: var(--cor-destaque-roxo);
@@ -396,6 +476,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: start;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: var(--gap-l);   
+  }
 }
 
 .vantagens__textos {
@@ -404,6 +489,10 @@ body {
   align-items: start;
   width: 40%;
   gap: var(--gap-m);
+
+  @media (max-width: 425px) {
+    width: 100%; 
+  }
 
   & > h2 {
     color: var(--cor-titulo);
@@ -416,6 +505,10 @@ body {
   & > p.vantagens__descricao {
     color: var(--cor-texto);
     text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    text-align: normal;
   }
 }
 
@@ -522,6 +615,11 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 8rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 }
 
@@ -530,6 +628,10 @@ body {
   flex-direction: column;
   align-items: start;
   gap: var(--gap-l);
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 
   & > img {
     padding-bottom: var(--padding-l);
@@ -544,6 +646,10 @@ body {
   color: var(--cor-texto-branco);
   font-weight: 600;
   padding-bottom: var(--padding-m);
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 
   & > span {
     color: var(--cor-destaque-rosa);
@@ -620,6 +726,11 @@ body {
   display: flex;
   gap: var(--gap-xl);
   padding: var(--padding-2xl) 0;
+  
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: var(--gap-l);
+  }
 }
 
 .rodape__informacoes {
