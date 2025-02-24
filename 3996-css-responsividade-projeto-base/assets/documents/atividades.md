@@ -104,3 +104,33 @@ Com base no código fornecido, qual será o tamanho da fonte de um título <h1> 
 2.5rem
 ```
 > O código aninhado @media (max-width: 425px) define font-size: 2.5rem para dispositivos com largura até 425px, incluindo 400px.
+
+---
+<br>
+
+---
+
+Você é uma pessoa desenvolvedora na Alura Start e recebeu como tarefa adicionar uma animação suave que apareça ao interagir com o scroll da página, destacando os serviços oferecidos. Para isso, você decidiu usar @keyframes para definir a animação e aplicá-la usando animation e animation-timeline.
+
+```css
+@keyframes appear {
+  // O que irá aqui ?
+}
+.element {
+ // O que irá aqui ?
+}
+```
+Como você criaria uma animação que faz os elementos da página inicial aparecerem suavemente quando a página é visualizada?
+
+```css
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.element {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+```
+> Esta alternativa usa @keyframes para definir a animação de opacidade e aplica corretamente as propriedades animation, animation-timeline e animation-range.
